@@ -1353,7 +1353,7 @@ color: #fee016;
 .footer-1 {
     position: relative;
     z-index: 3;
-    padding: 206px 0 0;
+    padding: 20px 0 0;
     background: #303030;
 }
 
@@ -3714,7 +3714,7 @@ footer .widget ul li a:hover {
     width: 100%;
     height: 100%;
     content: '';
-    background-image: linear-gradient(to left, #303030, #fee016);
+    background-image: linear-gradient(to left, #fee016, #fee016);
     opacity: .9;
 }
 
@@ -3905,24 +3905,35 @@ footer .widget ul li a:hover {
     height: 480px;
     border: none;
 }
-.error{
+
+.error {
     position: absolute !important;
     margin-left: 15px !important;
     color: rgb(255, 86, 86) !important;
     top: 31px;
 
 }
+
 .input-error::placeholder {
     opacity: .8 !important;
-    color: #FF2626 !important; /* Change placeholder text color to red */
-    transition: .3s ease-in;
-  }
-  .input-error{
-    border: 2px solid #FF2626 !important;
-  }
-  .input-error option{
     color: #FF2626 !important;
-  }
+    /* Change placeholder text color to red */
+    transition: .3s ease-in;
+}
+
+.input-error {
+    border: 2px solid #FF2626 !important;
+}
+
+.input-error option {
+    color: #FF2626 !important;
+}
+.error-msg{
+    text-align: center !important;
+    display: block;
+    color: #FF2626 !important;
+}
+
 .contact-form {
     position: relative;
     background: #303030;
@@ -3936,6 +3947,25 @@ footer .widget ul li a:hover {
     color: #2c234d;
     line-height: 30px;
     margin-bottom: 8px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #363636;
+    border-radius: 15px;
+    margin: 30px 0;
+    margin-bottom: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.newsletter-form button {
+    height: 56px;
+    margin-bottom: 20px;
 }
 
 .contact-form p {
@@ -3952,7 +3982,13 @@ footer .widget ul li a:hover {
 .contact-form textarea,
 .contact-form input[type="email"],
 .contact-form select option,
-.contact-form select {
+.contact-form select,
+.newsletter-form input[type="text"],
+.newsletter-form input[type="number"],
+.newsletter-form textarea,
+.newsletter-form input[type="email"],
+.newsletter-form select option,
+.newsletter-form select {
     width: 100%;
     height: 56px;
     font-size: 14px;
@@ -4038,7 +4074,8 @@ footer .widget ul li a:hover {
     box-shadow: 0px 14px 16px 0px rgba(11, 02, 55, 0.10);
 }
 
-.contact-form button[type="submit"] {
+.contact-form button[type="submit"],
+.newsletter-form button[type="submit"] {
     height: 50px;
     border-radius: 3px;
     background: #fee016;
@@ -4055,7 +4092,9 @@ footer .widget ul li a:hover {
     transition: all 0.3s ease;
 }
 
-.contact-form input[type="submit"]:hover {
+.newsletter-form button:hover,
+    .contact-form button:hover {
+    transform: scale(.95);
     -webkit-box-shadow: 0px 20px 30px 0px #3030;
     -moz-box-shadow: 0px 20px 30px 0px #303030;
     box-shadow: 0px 20px 30px 0px #303030;
@@ -4635,7 +4674,7 @@ blockquote cite {
 
 .post-share {
     position: relative;
-    border-top: 1px solid #ebecf2;
+    border-top: 1px solid #fee016;
     padding: 30px 0 0;
     margin: 20px 0 0;
     display: flex;
@@ -4644,7 +4683,7 @@ blockquote cite {
 
 .post-share h5 {
     font-size: 14px;
-    color: #2c234d;
+    color: #fee016;
     font-weight: 600;
     margin: 13px 20px 0 0;
 }
@@ -6069,7 +6108,7 @@ Profile Page
 .course-top h4 {
     font-size: 30px;
     line-height: 44px;
-    color: #2c234d;
+    color: #fee016;
     position: relative;
     top: -11px;
     margin: 0 0 18px;
@@ -6084,7 +6123,7 @@ Profile Page
     border-radius: 5px;
     font-size: 24px;
     font-weight: 700;
-    color: #5838fc;
+    color: #fee016;
     background: rgba(88, 56, 252, 0.1);
 }
 
@@ -6117,20 +6156,19 @@ Profile Page
     display: block;
     font-size: 14px;
     line-height: 20px;
-    color: #7e7c87;
+    color: #fee016;
     margin: 0 0 4px;
 }
 
 .course-meta .author a {
     display: block;
-    color: #2c234d;
+    color: #f3f3f3;
     margin: 0;
     font-size: 14px;
 }
 
 .categories {
-    border-left: 1px solid #c3c2c8;
-    border-right: 1px solid #c3c2c8;
+    border-left: 1px solid #fee016;
     padding: 0 32px;
     margin: 0 30px;
 }
@@ -6139,13 +6177,13 @@ Profile Page
     display: block;
     font-size: 14px;
     line-height: 20px;
-    color: #7e7c87;
+    color: #fee016;
     margin: 0 0 4px;
 }
 
 .categories a {
     display: block;
-    color: #2c234d;
+    color: #f3f3f3;
     font-weight: 600;
     line-height: .8;
     margin: 0;
@@ -6166,7 +6204,7 @@ Profile Page
 
 .course-meta .author a:hover,
 .categories a:hover {
-    color: #5838fc;
+    color: #fee016;
 }
 
 .sc-thumb {
@@ -6182,7 +6220,7 @@ Profile Page
 
 .course-tab-wrapper {
     position: relative;
-    border: 1px solid #ebecf2;
+    border: 1px solid #fee016;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -6198,19 +6236,19 @@ Profile Page
 .course-tab-btn li {
     list-style: none;
     margin: 0;
-    width: 25%;
+    width: 100%;
 }
 
 .course-tab-btn li a {
     display: inline-block;
     width: 100%;
     text-align: center;
-    background: #f7f8fa;
+    background: #fee016;
     position: relative;
     font-size: 13px;
     line-height: 55px;
     height: 55px;
-    color: #5d5a67;
+    color: #303030;
     font-weight: 600;
     border-bottom: 1px solid #ebecf2;
     border-right: 1px solid #ebecf2;
@@ -6230,7 +6268,7 @@ Profile Page
     top: 0;
     width: 0;
     height: 4px;
-    background: #5838fc;
+    background: #fee016;
     content: '';
     margin: auto;
     -webkit-transition: all 0.4s ease;
@@ -6240,9 +6278,11 @@ Profile Page
 
 .course-tab-btn li a.active,
 .course-tab-btn li a:hover {
-    color: #5838fc;
+    color: #fee016;
     border-bottom: none;
-    background: #fff;
+    background: #363636;
+    border-bottom: 1px solid #fee016;
+    box-shadow: 0 5px 15px rgba(254, 224, 22, 0.2);
 }
 
 .course-tab-btn li a.active:after,
@@ -6355,7 +6395,7 @@ Profile Page
     font-size: 16px;
     line-height: 30px;
     font-weight: 600;
-    color: #2c234d;
+    color: #fee016;
     margin: 0 0 24px;
 }
 
@@ -6363,14 +6403,14 @@ Profile Page
     position: absolute;
     left: 0;
     top: 0;
-    color: #5838fc;
+    color: #fee016;
     font-size: 20px;
     line-height: 35px;
 }
 
 .overview-content ul li span {
     display: block;
-    color: #5d5a67;
+    color: #f3f3f3;
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
