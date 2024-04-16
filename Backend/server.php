@@ -5,27 +5,25 @@ header("Access-Control-Allow-Methods: POST");
 $response = array(
   'email' => 'example@example.com',
   'name' => 'John Doe',
-  'error'=> 'false'
+  'error' => 'false'
 );
 // Respond to the preflight request
 if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
-  // Set additional CORS headers for preflight requests
   header("Access-Control-Allow-Headers: Content-Type");
-  header("Access-Control-Max-Age: 3600"); // Cache preflight response for 1 hour
+  header("Access-Control-Max-Age: 3600");
   exit;
 }
-//Database Connection
-$host = 'localhost'; // e.g., 'localhost'
+
+// Database Connection
+$host = 'localhost';
 $dbname = 'thehubd2_inscriptions';
-$username = 'thehub';
+$username = 'thehubd2_thehub';
 $password = 'TheHub08@';
 
 // Create a PDO instance
 try {
   $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-  // Set the PDO error mode to exception
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
 } catch (PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
@@ -35,12 +33,13 @@ include("firebaseRDB.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Psr\Http\Message\ResponseInterface;
 
 // Firebase declarations
 // $databaseURL = "https://tsvabas-default-rtdb.firebaseio.com/";
 // $db = new firebaseRDB($databaseURL);
 
-// 2 - Save data from POST to Database Functions
+// Save data from POST to Database Functions
 function inscriptionDatabase($data, $pdo, $response)
 {
   try {
@@ -61,11 +60,8 @@ function inscriptionDatabase($data, $pdo, $response)
     if ($stmt->errorCode() !== '00000') {
       throw new Exception("Error executing SQL: " . implode(", ", $stmt->errorInfo()));
     }
-    echo "success";
-    // Return an array with success status and last inserted ID
     return ['firstName' => $response['firstName'], 'email' => $response['email']];
   } catch (Exception $e) {
-    
     return [$response['error'] = true];
   }
 }
@@ -73,13 +69,14 @@ function inscriptionDatabase($data, $pdo, $response)
 function newsletterDatabase($data, $pdo, $response)
 {
   try {
-    $stmt = $pdo->prepare("INSERT INTO Newsletter (`email`)
-     VALUES (:email)");
+    $stmt = $pdo->prepare("INSERT INTO Newsletter (`email`, `timeRegistered`)
+     VALUES (:email, NOW())");
     $stmt->bindParam(':email', $data['email']);
     $stmt->execute();
 
     // Check for errors during execution
     if ($stmt->errorCode() !== '00000') {
+      $response['error'] = true;
       throw new Exception("Error executing SQL: " . implode(", ", $stmt->errorInfo()));
     }
 
@@ -89,64 +86,29 @@ function newsletterDatabase($data, $pdo, $response)
   } catch (Exception $e) {
     $response['error'] = true;
     return $response;
-}
+  }
 }
 
-function contact($data)
+function contactDatabase($data, $pdo, $response)
 {
-  // Retrieve form data from the array
-  $name = $data['name'];
-  $email = $data['email'];
-  $phone = $data['phone'];
-  $address = $data['address'];
-  $comments = $data['comment'];
-
-  // Specify the paths for attachments
-  // $filePaths = array(
-  //   '../dossiers/Dossier de participation The Startup Valley Algeria.pdf',
-  //   '../dossiers/Dossier Sponsoring The Startup Valley Algeria.pdf'
-  // );
-
-  require '../vendor/autoload.php';
-
-  // Create a new PHPMailer instance
-  $mail = new PHPMailer(true);
-
   try {
-    // Server settings
-    $mail->SMTPDebug = 0; // 0 - Disable Debugging, 2 - Responses received from the server
-    $mail->isSMTP(); // Set mailer to use SMTP
-    $mail->Host = 'mail.thehubdz.com'; // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true; // Enable SMTP authentication
-    $mail->Username = 'contact@thehubdz.com'; // SMTP username
-    $mail->Password = 'TheHub08@'; // SMTP password
-    $mail->SMTPSecure = 'tls'; // Enable TLS encryption
-    $mail->Port = 465; // TCP port to connect to
-    $mail->CharSet = 'UTF-8';
-    $mail->Subject = 'Contact Form Response';
-    $mail->setFrom('contact@thehubdz.com', 'The Hub');
-    $mail->isHTML(true);
-    // Sender and recipient details
-    $mail->addAddress('contact@thehubdz.com', 'The Hub');
-    // Email content
-    $mail->isHTML(true); // Set email format to HTML
-    $mail->Body = "
+    $stmt = $pdo->prepare("INSERT INTO Contact (`firstName`, `lastName`, `phone` , `email`, `subject`, `message`, `timeSent`)
+     VALUES (:firstName, :lastName, :phone, :email, :subject, :message, NOW())");
 
-   <p> Name: . $name .</p>
-   <p> Email: . $email . </p>
-   <p> Phone: . $phone . </p>
-   <p> Address: . $address . </p>
-   <p> Comment: . $comments . </p>
-
-    ";
-    // Send the email
-    // foreach ($filePaths as $filePath) {
-    //   $mail->addAttachment($filePath);
-    // }
-    $mail->send();
-    echo 'Message has been sent';
+    $stmt->bindParam(':firstName', $data['firstName']);
+    $stmt->bindParam(':lastName', $data['lastName']);
+    $stmt->bindParam(':email', $data['email']);
+    $stmt->bindParam(':phone', $data['phone']);
+    $stmt->bindParam(':subject', $data['subject']);
+    $stmt->bindParam(':message', $data['message']);
+    $stmt->execute();
+    // Check for errors during execution
+    if ($stmt->errorCode() !== '00000') {
+      throw new Exception("Error executing SQL: " . implode(", ", $stmt->errorInfo()));
+    }
+    return ['firstName' => $response['firstName'], 'email' => $response['email']];
   } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    return [$response['error'] = true];
   }
 }
 
@@ -263,21 +225,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'inscriptions':
       // Code to handle formNature = 'inscription'
       inscriptionDatabase($data, $pdo, $response);
-      echo ($response);
+      newsletterDatabase($response, $pdo, $response);
+      print_r($response);
       break;
     case 'test':
       // Code to handle formNature = 'test'
       break;
     case 'contact':
-      // Code to handle formNature = 'contact'
+      contactDatabase($data, $pdo, $response);
+      print_r($response);
       break;
     case 'newsletter':
       // Code to handle formNature = 'newsletter'
       newsletterDatabase($data, $pdo, $response);
-      echo ($response);
+      print_r($response);
       break;
     default:
-      echo "No case matched";
+      $response['error'] = false;
+      print_r($response);
       break;
   }
 } else {

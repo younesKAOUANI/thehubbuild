@@ -3728,7 +3728,7 @@ footer .widget ul li a:hover {
 
 .banner-title {
     font-size: 5rem;
-    line-height: .8;
+    line-height: .9;
     color: #303030;
     position: relative;
     text-align: center;
@@ -7109,4 +7109,22 @@ Profile Page
 .header-01.fix-header .navbar-brand {
     padding: 17px 0;
     transition: all 0.1s ease-out;
+}
+#error-msg {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FF4365;
+    opacity: 0;
+    margin-bottom: 10px;
+    transition: opacity .4s ease-in-out;
+}
+#error-msg.visibleError {
+    opacity: 1;
+}
+#error-msg.visibleSuccess {
+    color: #00fa9a ;
+    opacity: 1;
 }
