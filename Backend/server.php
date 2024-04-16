@@ -60,9 +60,10 @@ function inscriptionDatabase($data, $pdo, $response)
     if ($stmt->errorCode() !== '00000') {
       throw new Exception("Error executing SQL: " . implode(", ", $stmt->errorInfo()));
     }
-    return ['firstName' => $response['firstName'], 'email' => $response['email']];
+    $response['name']= $data['firstname'].' '.$data['lastname'];
+    $response['email']= $data['email'];
   } catch (Exception $e) {
-    return [$response['error'] = true];
+    $response['error'] = 'true';
   }
 }
 
@@ -76,16 +77,13 @@ function newsletterDatabase($data, $pdo, $response)
 
     // Check for errors during execution
     if ($stmt->errorCode() !== '00000') {
-      $response['error'] = true;
+      $response['error'] = 'true';
       throw new Exception("Error executing SQL: " . implode(", ", $stmt->errorInfo()));
     }
-
-    $response['email'] =  $data['email'];
-    $response['firstName'] =  $data['firstName'];
-    return $response;
+    $response['name']= $data['firstname'].' '.$data['lastname'];
+    $response['email']= $data['email'];
   } catch (Exception $e) {
-    $response['error'] = true;
-    return $response;
+    $response['error'] = 'true';
   }
 }
 
@@ -108,7 +106,7 @@ function contactDatabase($data, $pdo, $response)
     }
     return ['firstName' => $response['firstName'], 'email' => $response['email']];
   } catch (Exception $e) {
-    return [$response['error'] = true];
+    return [$response['error'] = 'true'];
   }
 }
 
@@ -218,31 +216,29 @@ function sendEmailVisitor($data)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $json = file_get_contents('php://input');
   $data = json_decode($json, true);
-
-  print_r($data);
   $formNature = $data['formNature'];
   switch ($formNature) {
     case 'inscriptions':
       // Code to handle formNature = 'inscription'
       inscriptionDatabase($data, $pdo, $response);
       newsletterDatabase($response, $pdo, $response);
-      print_r($response);
+      echo  json_encode($response);
       break;
     case 'test':
       // Code to handle formNature = 'test'
       break;
     case 'contact':
       contactDatabase($data, $pdo, $response);
-      print_r($response);
+      echo  json_encode($response);
       break;
     case 'newsletter':
       // Code to handle formNature = 'newsletter'
       newsletterDatabase($data, $pdo, $response);
-      print_r($response);
+      echo  json_encode($response);
       break;
     default:
-      $response['error'] = false;
-      print_r($response);
+      $response['error'] = "0";
+      echo  json_encode($response);
       break;
   }
 } else {
