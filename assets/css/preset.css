@@ -4,6 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
+#root {
+    background-color: #303030;
+}
 
 html,
 body {
@@ -12,17 +15,14 @@ body {
 }
 
 body {
-    font-family: "Helvetica" , "Hanken Grotesk", sans-serif !important;
+    font-family: "Hanken Grotesk", sans-serif;
     font-size: 16px;
     line-height: 26px;
+    color: #474747 !important;
     letter-spacing: 0;
     font-weight: 400;
     word-break: break-word;
     overflow-x: hidden;
-    background-image: url(../images/home/banner.png) !important;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 h1,
@@ -31,8 +31,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Helvetica" , "Hanken Grotesk", sans-serif !important;
-    color: #fdc500;
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #fee016;
     font-weight: 700;
     letter-spacing: 0;
     margin: 0 0 15px;
@@ -40,16 +40,13 @@ h6 {
 }
 
 p {
-    font-family: "Helvetica" , "Hanken Grotesk", sans-serif !important;
+    font-family: "Hanken Grotesk", sans-serif;
     color: #f3f3f3;
-}
-button, input {
-    font-family: "Helvetica" , "Hanken Grotesk", sans-serif !important;
 }
 
 a {
     color: #fff;
-    font-family: "Helvetica" , "Hanken Grotesk", sans-serif !important;
+
     text-decoration: none;
 
     -webkit-transition: all 0.4s ease;
@@ -58,7 +55,7 @@ a {
 }
 
 a:hover {
-    color: #fdc500;
+    color: #fee016;
     text-decoration: none;
 }
 
@@ -84,7 +81,7 @@ input[type=number] {
     font-size: 13px;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.750);
-    background: #fdc500;
+    background: #fee016;
     height: 50px;
     padding: 20px 35px;
     text-align: center;
@@ -103,11 +100,11 @@ input[type=number] {
 
 .bisylms-btn:hover {
     color: rgb(0, 0, 0);
-    background-color: #fdc500;
+    background-color: #fee016;
     transform: scale(0.98);
-    -webkit-box-shadow: 0px 9px 15px 0px #fdc500;
-    -moz-box-shadow: 0px 9px 15px 0px #fdc500;
-    box-shadow: 0px 9px 15px 0px #fdc500;
+    -webkit-box-shadow: 0px 9px 15px 0px #fee016;
+    -moz-box-shadow: 0px 9px 15px 0px #fee016;
+    box-shadow: 0px 9px 15px 0px #fee016;
 }
 
 .bisylms-btn-2 {
@@ -333,7 +330,7 @@ button:hover {
 .sec-title {
     font-size: 34px;
     line-height: 44px;
-    color: #fdc500;
+    color: #fedf16;
     margin: 0 0 61px;
     position: relative;
 }
