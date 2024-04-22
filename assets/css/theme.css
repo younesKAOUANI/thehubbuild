@@ -84,7 +84,7 @@
 }
 
 .navbar-expand-lg .navbar-nav li:hover>a {
-    color: #fdc500;
+    color: #fee016;
 }
 
 
@@ -219,21 +219,18 @@
 
 .join-btn:hover {
     background: rgba(0, 0, 0, 0.700);
-    color: #fdc500;
+    color: #fee016;
     -webkit-box-shadow: 0px 5px 20px 0px #fedf1647;
     -moz-box-shadow: 0px 5px 20px 0px #fedf1647;
     box-shadow: 0px 5px 20px 0px #fedf1647;
 }
 
 .join-btn:hover a {
-    color: #fdc500;
+    color: #fee016;
 }
 
 /*---- Hero Banner Section ------*/
 .hero-banner-1 {
-    height: 100vh;
-    display: flex;
-    align-items: center;
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -254,6 +251,7 @@
 .hero-content {
     position: relative;
     margin-right: -2px;
+    padding: 75px 0 0;
 }
 
 .hero-content h2 {
@@ -401,7 +399,7 @@
 .course-item-1 {
     position: relative;
     width: 100%;
-    background: #003f88;
+    background: #363636;
     border-radius: 20px;
     padding: 55px 30px 43px;
     margin-right: 40px;
@@ -409,7 +407,7 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
 }
 
 .courseSVG {
@@ -420,7 +418,7 @@
 }
 
 .course-item-1:hover .courseSVG {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-1:after {
@@ -431,7 +429,7 @@
     height: 0;
     border-style: solid;
     border-width: 30px 30px 0 0;
-    border-color: #fdc500 transparent transparent transparent;
+    border-color: #fee016 transparent transparent transparent;
     content: '';
     visibility: hidden;
     opacity: 0;
@@ -447,10 +445,10 @@
 
 .course-item-1:hover {
     border: 2px solid transparent;
-    background: #003f88;
-    -webkit-box-shadow: 0px 0px 50px 0px #003f88;
-    -moz-box-shadow: 0px 0px 50px 0px #003f88;
-    box-shadow: 0px 0px 50px 0px #003f88;
+    background: #303030;
+    -webkit-box-shadow: 0px 0px 50px 0px #636363;
+    -moz-box-shadow: 0px 0px 50px 0px #636363;
+    box-shadow: 0px 0px 50px 0px #636363;
 }
 
 .course-item-1:hover svg {
@@ -491,7 +489,7 @@
     transition: all 0.4s ease; */
 /* }
 .course-item-1:hover h4{
-color: #fdc500;
+color: #fee016;
 } */
 .course-item-1 h4 a {
     color: inherit;
@@ -526,14 +524,14 @@ color: #fdc500;
 .ab-content p.mid-item {
     font-size: 20px;
     line-height: 30px;
-    color: #fdc500;
+    color: #fee016;
     margin-bottom: 25px;
 }
 
 /*---- Feature Course Section ------*/
 .feature-course-section {
     position: relative;
-    background: #003f88;
+    background: #303030;
     padding: 110px 0 90px;
 }
 
@@ -561,7 +559,7 @@ color: #fdc500;
 
 .shaf-filter li:hover,
 .shaf-filter li.active {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .shaf-filter li:first-child {
@@ -650,10 +648,10 @@ color: #fdc500;
 .front p {
     display: inline-block;
     height: 26px;
-    background: #003f88;
+    background: #303030;
     font-size: 13px;
     line-height: .8;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     text-align: center;
     border-radius: 3px;
@@ -671,7 +669,7 @@ color: #fdc500;
 
 .fcf-bottom {
     position: relative;
-    border-top: 2px dotted #003f88;
+    border-top: 2px dotted #303030;
     width: calc(100% + 90px);
     left: -45px;
     display: flex;
@@ -696,7 +694,7 @@ color: #fdc500;
 }
 
 .back {
-    background: #fdc500;
+    background: #fee016;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -719,10 +717,10 @@ color: #fdc500;
 .back .c-cate {
     display: inline-block;
     height: 26px;
-    background: #003f88;
+    background: #303030;
     font-size: 13px;
     line-height: .8;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     text-align: center;
     border-radius: 3px;
@@ -733,7 +731,7 @@ color: #fdc500;
 .back h4 {
     font-size: 20px;
     line-height: 28px;
-    color: #003f88;
+    color: #303030;
     font-weight: 600;
     margin: 0 0 12px;
 }
@@ -751,7 +749,7 @@ color: #fdc500;
 .ratings i {
     font-size: 12px;
     line-height: .8;
-    color: #003f88;
+    color: #303030;
 }
 
 .ratings span {
@@ -759,7 +757,7 @@ color: #fdc500;
     font-weight: 400;
     line-height: .8;
     font-size: 14px;
-    color: #003f88;
+    color: #303030;
     margin: 0 0 0 12px;
 }
 
@@ -767,7 +765,7 @@ color: #fdc500;
     display: block;
     font-size: 26px;
     line-height: 22px;
-    color: #003f88;
+    color: #303030;
     font-weight: 600;
     margin: 0 0 90px;
 }
@@ -794,7 +792,7 @@ color: #fdc500;
 .author a {
     display: inline-block;
     font-size: 15px;
-    color: #003f88;
+    color: #303030;
     line-height: .8;
     font-weight: 600;
     margin-left: 18px;
@@ -802,7 +800,7 @@ color: #fdc500;
 
 .back .fcf-bottom a i,
 .back .fcf-bottom a {
-    color: #003f88;
+    color: #303030;
 }
 
 .feature-course-item:hover .front {
@@ -831,24 +829,24 @@ color: #fdc500;
 }
 
 .cta-section .sec-title {
-    color: #003f88;
+    color: #303030;
     margin-bottom: 16px;
 }
 
 .cta-section p {
-    color: #003f88;
+    color: #303030;
     margin-bottom: 44px;
 }
 
 .cta-section .bisylms-btn {
-    color: #fdc500;
-    background: #003f88;
+    color: #fee016;
+    background: #303030;
 }
 
 .cta-section .bisylms-btn:hover {
-    -webkit-box-shadow: 0px 9px 15px 0px #003f88;
-    -moz-box-shadow: 0px 9px 15px 0px #003f88;
-    box-shadow: 0px 9px 15px 0px #003f88;
+    -webkit-box-shadow: 0px 9px 15px 0px #303030;
+    -moz-box-shadow: 0px 9px 15px 0px #303030;
+    box-shadow: 0px 9px 15px 0px #303030;
 }
 
 .video-section {
@@ -888,7 +886,7 @@ color: #fdc500;
     border-radius: 50%;
     text-align: center;
     line-height: 80px;
-    color: #fdc500;
+    color: #fee016;
     display: inline-block;
     position: absolute;
     z-index: 3;
@@ -898,13 +896,13 @@ color: #fdc500;
     bottom: 0;
     margin: auto;
     animation: waveBtn 2.5s infinite;
-    -webkit-box-shadow: 0px 9px 15px 0px #fdc500;
-    -moz-box-shadow: 0px 9px 15px 0px #fdc500;
-    box-shadow: 0px 9px 15px 0px #fdc500;
+    -webkit-box-shadow: 0px 9px 15px 0px #fee016;
+    -moz-box-shadow: 0px 9px 15px 0px #fee016;
+    box-shadow: 0px 9px 15px 0px #fee016;
 }
 
 .video-banner .popup-video:hover {
-    background: #fdc500;
+    background: #fee016;
     color: #fff;
 }
 
@@ -1361,7 +1359,7 @@ color: #fdc500;
     position: relative;
     z-index: 3;
     padding: 20px 0 0;
-    background: #003f88;
+    background: #303030;
 }
 
 footer .widget {
@@ -1372,7 +1370,7 @@ footer .widget {
 footer .widget .widget-title {
     font-size: 16px;
     line-height: 30px;
-    color: #fdc500;
+    color: #fee016;
     margin-bottom: 20px;
 }
 
@@ -1411,32 +1409,32 @@ footer .widget .widget-title {
 }
 
 .ab-social a.fac {
-    color: #003f88;
+    color: #303030;
 
-    background: #fdc500;
+    background: #fee016;
 }
 
 .ab-social a.twi {
-    color: #003f88;
+    color: #303030;
 
-    background: #fdc500;
+    background: #fee016;
 }
 
 .ab-social a.you {
-    color: #003f88;
+    color: #303030;
 
-    background: #fdc500;
+    background: #fee016;
 }
 
 .ab-social a.lin {
-    color: #003f88;
-    background: #fdc500;
+    color: #303030;
+    background: #fee016;
 }
 
 .ab-social a:hover {
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 111, 150, 0.30);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(9, 111, 150, 0.30);
-    box-shadow: 0px 10px 20px 0px rgba(9, 111, 150, 0.30);
+    -webkit-box-shadow: 0px 10px 20px 0px #fee016;
+    -moz-box-shadow: 0px 10px 20px 0px #fee016;
+    box-shadow: 0px 10px 20px 0px #fee016;
 }
 
 footer .widget ul {
@@ -1458,12 +1456,12 @@ footer .widget ul li a {
 }
 
 footer .widget ul li a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .copyright {
     position: relative;
-    border-top: 1px solid #fdc500;
+    border-top: 1px solid #fee016;
     margin-top: 90px;
     padding: 22px 0 46px;
 }
@@ -1476,7 +1474,7 @@ footer .widget ul li a:hover {
 }
 
 .copyright p a {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .copyright p a:hover {
@@ -1776,8 +1774,8 @@ footer .widget ul li a:hover {
 .course-item-2 {
     position: relative;
     z-index: 2;
-    border: 2px solid #fdc500;
-    background: #003f88;
+    border: 2px solid #fee016;
+    background: #303030;
     padding: 38px 15px 44px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -1811,7 +1809,7 @@ footer .widget ul li a:hover {
 }
 
 .course-item-2 h4 a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-2 p {
@@ -1876,7 +1874,7 @@ footer .widget ul li a:hover {
 }
 
 .ab-content-2 .read-more:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .fact-wrapper {
@@ -3367,14 +3365,14 @@ footer .widget ul li a:hover {
 
 .fci-details {
     position: relative;
-    background-color: #003f88;
+    background-color: #303030;
     padding: 17px 35px 0;
 }
 
 .fci-details .c-cate {
     font-size: 12px;
     line-height: .8;
-    color: #fdc500;
+    color: #fee016;
     text-transform: uppercase;
     font-weight: 600;
     display: block;
@@ -3395,7 +3393,7 @@ footer .widget ul li a:hover {
 .fci-details h4 {
     font-size: 20px;
     line-height: 28px;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     margin-bottom: 23px;
 }
@@ -3413,7 +3411,7 @@ footer .widget ul li a:hover {
 }
 
 .fci-details .author a {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .fci-details .author a:hover {
@@ -3421,7 +3419,7 @@ footer .widget ul li a:hover {
 }
 
 .fci-details .author img {
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
     width: 50px;
     height: 50px;
 }
@@ -3724,46 +3722,27 @@ footer .widget ul li a:hover {
     width: 100%;
     height: 100%;
     content: '';
-    background-image: linear-gradient(to left, #fdc500, #fdc500);
+    background-image: linear-gradient(to left, #fee016, #fee016);
     opacity: .9;
 }
 
 .banner-title {
     font-size: 5rem;
-    color: #363636;
+    line-height: .9;
+    color: #303030;
     position: relative;
     text-align: center;
-    z-index: 4;
-    margin: 0 0 13px;
-}
-.page-banner h1{
-    position: absolute;
-    margin: 0 0 13px;
-    line-height: .55;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-transform: uppercase;
-    color: transparent;
-    letter-spacing: 5px;
-    text-decoration: underline;
-    padding-bottom: 120px;
-    text-decoration-thickness: 1px;
-    -webkit-text-decoration-thickness: 1px;
-    text-decoration-color: #30303080;
-    /* border-bottom: 1px solid #3030308f; */
-    -webkit-text-stroke: 1px #30303080;
-    font-size:120px;
     z-index: 3;
+    margin: 0 0 13px;
 }
+
 .bread-crumbs {
     text-align: center;
     position: relative;
     z-index: 3;
     font-size: 18px;
-    line-height: 60px;
-    color: #363636;
+    line-height: 36px;
+    color: #303030;
     font-weight: 400;
 }
 
@@ -3772,14 +3751,14 @@ footer .widget ul li a:hover {
 }
 
 .bread-crumbs a:hover {
-    color: #003f88;
+    color: #303030;
 }
 
 .bread-crumbs span {
     display: inline-block;
     width: 5px;
     height: 5px;
-    background: #363636;
+    background: #303030;
     border-radius: 50%;
     margin: 0 9px;
     margin-bottom: 3px;
@@ -3825,15 +3804,15 @@ footer .widget ul li a:hover {
 }
 
 .abpage-section-1 .read-more:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .abpage-section-1 .funfact-item h2 {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .ts-about .funfact-item-2 h2 {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .ab-customars-section {
@@ -3860,7 +3839,7 @@ footer .widget ul li a:hover {
 /---------------------------------------------------------*/
 .contact-section {
     position: relative;
-    background: #003f88;
+    background: #303030;
     padding: 120px 0;
 }
 
@@ -3871,7 +3850,7 @@ footer .widget ul li a:hover {
 
 .contact--info-area h3 {
     font-size: 30px;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 800;
     line-height: .8;
     margin-bottom: 16px;
@@ -3895,7 +3874,7 @@ footer .widget ul li a:hover {
     line-height: 26px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #fdc500;
+    color: #fee016;
 }
 
 .single-info p {
@@ -3910,7 +3889,7 @@ footer .widget ul li a:hover {
 .single-info p i {
     font-size: 16px;
     line-height: 22px;
-    color: #fdc500;
+    color: #fee016;
     position: absolute;
     left: 0;
     top: 0;
@@ -3921,7 +3900,7 @@ footer .widget ul li a:hover {
     line-height: 26px;
     font-weight: 600;
     margin-bottom: 24px;
-    color: #fdc500;
+    color: #fee016;
 }
 
 .bisylms-map {
@@ -3958,14 +3937,18 @@ footer .widget ul li a:hover {
 .input-error option {
     color: #FF2626 !important;
 }
-
+.error-msg{
+    text-align: center !important;
+    display: block;
+    color: #FF2626 !important;
+}
 
 .contact-form {
     position: relative;
-    background: #003f88;
+    background: #303030;
     border-radius: 10px;
     padding: 43px 50px 65px;
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
 }
 
 .contact-form h4 {
@@ -3978,10 +3961,8 @@ footer .widget ul li a:hover {
 .newsletter-form {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 20px 20px;
-    background-color: #003f88;
-    border: 2px solid #fdc500;
-    border-radius: 8px;
+    padding: 50px 20px;
+    background-color: #363636;
     border-radius: 15px;
     margin: 30px 0;
     margin-bottom: 80px;
@@ -4024,10 +4005,10 @@ footer .widget ul li a:hover {
     font-weight: 400;
     border-radius: 3px;
     border: none;
-    background: transparent;
-    color: #fdc500;
+    background: #303030;
+    color: #fee016;
     outline: none;
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
     padding: 0 30px;
     margin-bottom: 20px;
     -webkit-transition: all 0.3s ease;
@@ -4038,7 +4019,7 @@ footer .widget ul li a:hover {
 .contact-form select option {
     background-color: #f3f3f3;
     /* Background color */
-    color: #003f88;
+    color: #303030;
     /* Text color */
     padding: 15px 8px;
     /* Padding */
@@ -4046,17 +4027,17 @@ footer .widget ul li a:hover {
 
 /* Style hover state */
 .contact-form select option:hover {
-    background-color: #fdc500;
+    background-color: #fee016;
     /* Hover background color */
-    color: #003f88;
+    color: #303030;
     /* Hover text color */
 }
 
 /* Style selected option */
 .contact-form select option:checked {
-    background-color: #003f88;
+    background-color: #303030;
     /* Selected background color */
-    color: #fdc500;
+    color: #fee016;
     /* Selected text color */
 }
 
@@ -4071,7 +4052,7 @@ footer .widget ul li a:hover {
 .contact-form input[type="text"]::-moz-placeholder,
 .contact-form input[type="number"]::-moz-placeholder,
 .contact-form input[type="email"]::-moz-placeholder {
-    color: #fdc500;
+    color: #fee016;
     opacity: .8;
 }
 
@@ -4079,7 +4060,7 @@ footer .widget ul li a:hover {
 .contact-form input[type="text"]::-ms-input-placeholder,
 .contact-form input[type="number"]::-ms-input-placeholder,
 .contact-form input[type="email"]::-ms-input-placeholder {
-    color: #fdc500;
+    color: #fee016;
     opacity: .8;
 }
 
@@ -4087,7 +4068,7 @@ footer .widget ul li a:hover {
 .contact-form input[type="text"]::-webkit-input-placeholder,
 .contact-form input[type="number"]::-webkit-input-placeholder,
 .contact-form input[type="email"]::-webkit-input-placeholder {
-    color: #fdc500;
+    color: #fee016;
     opacity: .8;
 }
 
@@ -4106,8 +4087,8 @@ footer .widget ul li a:hover {
 .newsletter-form button[type="submit"] {
     height: 50px;
     border-radius: 3px;
-    background: #fdc500;
-    color: #003f88;
+    background: #fee016;
+    color: #303030;
     text-align: center;
     border: none;
     outline: none;
@@ -4124,8 +4105,8 @@ footer .widget ul li a:hover {
     .contact-form button:hover {
     transform: scale(.95);
     -webkit-box-shadow: 0px 20px 30px 0px #3030;
-    -moz-box-shadow: 0px 20px 30px 0px #003f88;
-    box-shadow: 0px 20px 30px 0px #003f88;
+    -moz-box-shadow: 0px 20px 30px 0px #303030;
+    box-shadow: 0px 20px 30px 0px #303030;
 }
 
 .condition-check {
@@ -4154,7 +4135,7 @@ footer .widget ul li a:hover {
 }
 
 .condition-check label a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .condition-check label:before {
@@ -4177,7 +4158,7 @@ footer .widget ul li a:hover {
     bottom: 0;
     font-family: 'ElegantIcons';
     content: "\4e";
-    color: #fdc500;
+    color: #fee016;
     font-size: 10px;
     left: 2px;
     position: absolute;
@@ -4197,7 +4178,7 @@ footer .widget ul li a:hover {
     background-position: center center;
     height: 100vh;
     padding: 0 0 0;
-    background-color: #fdc500;
+    background-color: #fee016;
 }
 
 .middle-404 {
@@ -4223,7 +4204,7 @@ footer .widget ul li a:hover {
 
 .content-404 h2 {
     font-size: 50px;
-    color: #003f88;
+    color: #303030;
     line-height: .8;
     font-weight: 800;
     margin: 77px 0 31px;
@@ -4232,7 +4213,7 @@ footer .widget ul li a:hover {
 .content-404 p {
     font-size: 30px;
     line-height: 24px;
-    color: #003f88;
+    color: #303030;
     margin-bottom: 60px;
 }
 
@@ -4249,12 +4230,12 @@ footer .widget ul li a:hover {
 
 .content-404 ul li a {
     height: 50px;
-    background: #003f88;
+    background: #303030;
     text-align: center;
     display: inline-block;
     font-size: 13px;
     line-height: 50px;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     text-transform: capitalize;
     border-radius: 3px;
@@ -4269,12 +4250,12 @@ footer .widget ul li a:hover {
 
 .content-404 ul li:last-child a {
     background: transparent;
-    color: #003f88;
+    color: #303030;
 }
 
 .content-404 ul li:last-child a:hover {
-    background: #003f88;
-    color: #fdc500;
+    background: #303030;
+    color: #fee016;
 }
 
 /*--------------------------------------------------------
@@ -4702,7 +4683,7 @@ blockquote cite {
 
 .post-share {
     position: relative;
-    border-top: 1px solid #fdc500;
+    border-top: 1px solid #fee016;
     padding: 30px 0 0;
     margin: 20px 0 0;
     display: flex;
@@ -4711,7 +4692,7 @@ blockquote cite {
 
 .post-share h5 {
     font-size: 14px;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     margin: 13px 20px 0 0;
 }
@@ -5184,8 +5165,8 @@ Profile Page
 
 .feature-course-item-4 {
     position: relative;
-    background: #003f88;
-    border: 2px solid #fdc500;
+    background: #303030;
+    border: 2px solid #fee016;
     border-radius: 18px;
     margin-bottom: 30px;
     -webkit-transition: all 0.4s ease;
@@ -5228,7 +5209,7 @@ Profile Page
 
 .feature-course-item-4:hover .fcf-thumb:after {
     visibility: visible;
-    background-color: #fdc500;
+    background-color: #fee016;
     opacity: .8;
 }
 
@@ -5269,7 +5250,7 @@ Profile Page
 }
 
 .feature-course-item-4 .fci-details .c-cate:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .feature-course-item-4 .fci-details .c-cate {
@@ -5282,7 +5263,7 @@ Profile Page
 }
 
 .feature-course-item-4 .fci-details h4 a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .feature-course-item-4 .fci-details .author {
@@ -5294,7 +5275,7 @@ Profile Page
 }
 
 .feature-course-item-4 .fci-details .author a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .feature-course-item-4 .price-rate .course-price {
@@ -5392,7 +5373,7 @@ Profile Page
 /---------------------------------------------------------*/
 .coursepage-section {
     position: relative;
-    background: #003f88;
+    background: #303030;
     padding: 120px 0;
 }
 
@@ -5405,9 +5386,9 @@ Profile Page
     margin: 0 0 40px;
     display: flex;
     justify-content: space-between;
-    -webkit-box-shadow: 0px 2px 4px 0px #fdc500;
-    -moz-box-shadow: 0px 2px 2px 0px #fdc500;
-    box-shadow: 3px 3px 8px 0px #fdc500;
+    -webkit-box-shadow: 0px 2px 4px 0px #fee016;
+    -moz-box-shadow: 0px 2px 2px 0px #fee016;
+    box-shadow: 3px 3px 8px 0px #fee016;
 }
 
 .toolbar-btn {
@@ -5430,7 +5411,7 @@ Profile Page
     border: none;
     outline: none;
     background: transparent;
-    color: #003f88;
+    color: #303030;
     font-size: 14px;
     position: relative;
     line-height: 44px;
@@ -5451,7 +5432,7 @@ Profile Page
     width: 1px;
     height: 30px;
     content: '';
-    background: #003f88;
+    background: #303030;
 }
 
 .toolbar-btn li:last-child a {
@@ -5465,7 +5446,7 @@ Profile Page
 .toolbar-btn li a i {
     display: inline-block;
     font-size: 30px;
-    color: #003f88;
+    color: #303030;
     margin-right: 7px;
     position: relative;
     top: 9px;
@@ -5581,12 +5562,12 @@ Profile Page
 }
 
 .toolbar-wrapper-2 .toolbar-btn li a i {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .toolbar-wrapper-2 .toolbar-btn li a {
     border-radius: 3px;
-    color: #fdc500;
+    color: #fee016;
     margin-right: 6px;
     padding: 0 22px;
     background: #232323;
@@ -5598,8 +5579,8 @@ Profile Page
 
 .toolbar-wrapper-2 .toolbar-btn li a:hover,
 .toolbar-wrapper-2 .toolbar-btn li a.active {
-    color: #003f88;
-    background: #fdc500;
+    color: #303030;
+    background: #fee016;
     -webkit-box-shadow: 0px 0px 30px 0px #fedf1650;
     -moz-box-shadow: 0px 0px 30px 0px #fedf1650;
     box-shadow: 0px 0px 30px 0px #fedf1650;
@@ -5607,7 +5588,7 @@ Profile Page
 
 .toolbar-wrapper-2 .toolbar-btn li a:hover i,
 .toolbar-wrapper-2 .toolbar-btn li a.active i {
-    color: #003f88;
+    color: #303030;
 }
 
 .toolbar-wrapper-2 .sorting {
@@ -5674,16 +5655,16 @@ Profile Page
 }
 
 .course-sidebar .widget {
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
     position: relative;
-    background: #003f88;
+    background: #303030;
     border-radius: 10px;
     margin: 0 0 30px;
     padding: 31px 35px 40px;
 }
 
 .course-sidebar .widget .widget-title {
-    color: #fdc500;
+    color: #fee016;
     font-size: 18px;
     line-height: 24px;
     text-transform: capitalize;
@@ -5705,7 +5686,7 @@ Profile Page
     width: 100px;
     height: 1px;
     content: '';
-    background: #fdc500;
+    background: #fee016;
 }
 
 .course-sidebar .widget ul {
@@ -5726,7 +5707,7 @@ Profile Page
 .course-sidebar .widget ul li span {
     font-size: 14px;
     line-height: 40px;
-    color: #fdc500;
+    color: #fee016;
     font-weight: 600;
     padding-left: 30px;
     position: relative;
@@ -5736,10 +5717,11 @@ Profile Page
 #business:checked~span::after,
 #marketing:checked~span::after,
 #dev:checked~span::after,
+#other:checked~span::after,
 #audio-visual:checked~span::after,
 #lang:checked~span::after {
     content: "\5a";
-    color: #fdc500;
+    color: #fee016;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -5920,9 +5902,9 @@ Profile Page
 
 .course-item-4 {
     position: relative;
-    background-color: #003f88;
+    background-color: #303030;
     display: flex;
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
     overflow: hidden;
     justify-content: flex-start;
     border-radius: 30px;
@@ -5960,7 +5942,7 @@ Profile Page
 
 .course-item-4:hover .ci-thumb:after {
     visibility: visible;
-    background-color: #fdc500;
+    background-color: #fee016;
     opacity: .8;
 }
 
@@ -5992,7 +5974,7 @@ Profile Page
 .course-item-4 .course-details .c-cate {
     font-size: 12px;
     line-height: .8;
-    color: #fdc500;
+    color: #fee016;
     text-transform: uppercase;
     font-weight: 600;
     display: block;
@@ -6007,32 +5989,32 @@ Profile Page
 }
 
 .course-item-4 .course-details .c-cate:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-4 .course-details h4 {
-    color: #fdc500;
+    color: #fee016;
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 23px;
 }
 
 .course-item-4 .course-details h4 a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-4 .course-details .author a {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-4 .course-details .author img {
     width: 100px;
     height: 100px;
-    border: 2px solid #fdc500;
+    border: 2px solid #fee016;
 }
 
 .course-item-4 .course-details .author a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .course-item-4 .course-details .author {
@@ -6136,7 +6118,7 @@ Profile Page
 .course-top h4 {
     font-size: 30px;
     line-height: 44px;
-    color: #fdc500;
+    color: #fee016;
     position: relative;
     top: -11px;
     margin: 0 0 18px;
@@ -6151,7 +6133,7 @@ Profile Page
     border-radius: 5px;
     font-size: 24px;
     font-weight: 700;
-    color: #fdc500;
+    color: #fee016;
     background: rgba(88, 56, 252, 0.1);
 }
 
@@ -6184,7 +6166,7 @@ Profile Page
     display: block;
     font-size: 14px;
     line-height: 20px;
-    color: #fdc500;
+    color: #fee016;
     margin: 0 0 4px;
 }
 
@@ -6196,7 +6178,7 @@ Profile Page
 }
 
 .categories {
-    border-left: 1px solid #fdc500;
+    border-left: 1px solid #fee016;
     padding: 0 32px;
     margin: 0 30px;
 }
@@ -6205,7 +6187,7 @@ Profile Page
     display: block;
     font-size: 14px;
     line-height: 20px;
-    color: #fdc500;
+    color: #fee016;
     margin: 0 0 4px;
 }
 
@@ -6232,7 +6214,7 @@ Profile Page
 
 .course-meta .author a:hover,
 .categories a:hover {
-    color: #fdc500;
+    color: #fee016;
 }
 
 .sc-thumb {
@@ -6248,7 +6230,7 @@ Profile Page
 
 .course-tab-wrapper {
     position: relative;
-    border: 1px solid #fdc500;
+    border: 1px solid #fee016;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -6271,12 +6253,12 @@ Profile Page
     display: inline-block;
     width: 100%;
     text-align: center;
-    background: #fdc500;
+    background: #fee016;
     position: relative;
     font-size: 13px;
     line-height: 55px;
     height: 55px;
-    color: #003f88;
+    color: #303030;
     font-weight: 600;
     border-bottom: 1px solid #ebecf2;
     border-right: 1px solid #ebecf2;
@@ -6296,7 +6278,7 @@ Profile Page
     top: 0;
     width: 0;
     height: 4px;
-    background: #fdc500;
+    background: #fee016;
     content: '';
     margin: auto;
     -webkit-transition: all 0.4s ease;
@@ -6306,10 +6288,10 @@ Profile Page
 
 .course-tab-btn li a.active,
 .course-tab-btn li a:hover {
-    color: #fdc500;
+    color: #fee016;
     border-bottom: none;
     background: #363636;
-    border-bottom: 1px solid #fdc500;
+    border-bottom: 1px solid #fee016;
     box-shadow: 0 5px 15px rgba(254, 224, 22, 0.2);
 }
 
@@ -6423,7 +6405,7 @@ Profile Page
     font-size: 16px;
     line-height: 30px;
     font-weight: 600;
-    color: #fdc500;
+    color: #fee016;
     margin: 0 0 24px;
 }
 
@@ -6431,7 +6413,7 @@ Profile Page
     position: absolute;
     left: 0;
     top: 0;
-    color: #fdc500;
+    color: #fee016;
     font-size: 20px;
     line-height: 35px;
 }
@@ -6876,8 +6858,8 @@ Profile Page
     height: 40px;
     line-height: 42px;
     text-align: center;
-    background: #fdc500;
-    color: #003f88;
+    background: #fee016;
+    color: #303030;
     opacity: 0;
     visibility: hidden;
     position: fixed;
